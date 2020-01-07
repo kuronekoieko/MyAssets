@@ -10,6 +10,7 @@ Unityで新規でプロジェクトを作るときの雛形です。
 3. ヒエラルキー上に空のゲームオブジェクトを作り、適当な名前をつける(「GameManager」が推奨)  
 4. 作ったゲームオブジェクトに、以下2つのスクリプトをアタッチする  
   ・GameManager  
-  ・GameController  
+  ・GameController
+  
 5． カメラに次のスクリプトをアタッチする  
   ・CameraController  
