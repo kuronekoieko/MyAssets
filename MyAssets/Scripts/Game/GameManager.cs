@@ -15,11 +15,19 @@ public class GameManager : MonoBehaviour
     {
         gameController = GetComponent<GameController>();
         gameController.OnStart();
+        Variables.screenState = ScreenState.GAME;
     }
 
 
     void Update()
     {
-        gameController.OnUpdate();
+        switch (Variables.screenState)
+        {
+            case ScreenState.GAME:
+                gameController.OnUpdate();
+                break;
+            default:
+                break;
+        }
     }
 }
