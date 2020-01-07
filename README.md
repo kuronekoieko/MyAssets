@@ -5,12 +5,11 @@ Unityで新規でプロジェクトを作るときの雛形です。
 自分も使うのでわりと頻繁に更新するかもしれません。  
 
 # 使い方
-1. zipでこのリポジトリをダウンロードする  
-2. Unityエディタ上で「Project」タブを開き、「Assets」直下に「MyAsset」をそのまま置く  
-3. ヒエラルキー上に空のゲームオブジェクトを作り、適当な名前をつける(「GameManager」が推奨)  
-4. 作ったゲームオブジェクトに、以下2つのスクリプトをアタッチする  
-  ・GameManager  
-  ・GameController
-  
-5． カメラに次のスクリプトをアタッチする  
-  ・CameraController  
+1 zipでこのリポジトリをダウンロードする  
+2 Unityエディタ上で「Project」タブを開き、「Assets」直下に「MyAsset」をそのまま置く  
+3 ヒエラルキー上に空のゲームオブジェクトを作り、適当な名前をつける(「GameManager」が推奨)  
+4 作ったゲームオブジェクトに、以下2つのスクリプトをアタッチする  
+・GameManager  
+・GameController  
+5 カメラに次のスクリプトをアタッチする  
+・CameraController  
