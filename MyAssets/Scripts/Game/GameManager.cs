@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] GameCanvasManager gameCanvasManager;
+    [SerializeField] ResultCanvasManager resultCanvasManager;
     GameController gameController;
     void Awake()
     {
@@ -15,7 +17,9 @@ public class GameManager : MonoBehaviour
     {
         gameController = GetComponent<GameController>();
         gameController.OnStart();
-        Variables.screenState = ScreenState.GAME;
+        gameCanvasManager.OnStart();
+        resultCanvasManager.OnStart();
+        Variables.screenState = ScreenState.INITIALIZE;
     }
 
 
@@ -23,8 +27,16 @@ public class GameManager : MonoBehaviour
     {
         switch (Variables.screenState)
         {
+            case ScreenState.INITIALIZE:
+                gameController.OnInitialize();
+                gameCanvasManager.OnInitialize();
+                resultCanvasManager.OnInitialize();
+                Variables.screenState = ScreenState.GAME;
+                break;
             case ScreenState.GAME:
                 gameController.OnUpdate();
+                break;
+            case ScreenState.RESULT:
                 break;
             default:
                 break;
