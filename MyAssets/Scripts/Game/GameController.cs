@@ -9,6 +9,11 @@ public class GameController : MonoBehaviour
 
     }
 
+    public void OnInitialize()
+    {
+
+    }
+
     public void OnUpdate()
     {
 
